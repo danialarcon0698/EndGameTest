@@ -2,7 +2,7 @@
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private BulletScriptable bulletScriptable = null; 
+    [SerializeField] private BulletScriptableObject bulletScriptable = null; 
 
     private void OnCollisionEnter(Collision collision)
     {

@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 
-public class Door : MonoBehaviour
+public class DoorView : MonoBehaviour
 {
     private int isOpenHash = Animator.StringToHash("IsOpen");
-
     private Animator m_Animator = null;
 
     private void Awake()
@@ -11,7 +10,10 @@ public class Door : MonoBehaviour
         m_Animator = GetComponent<Animator>();
     }
 
-    public void OpenDoor() 
+    /// <summary>
+    /// Start door opening animation.
+    /// </summary>
+    public void OpeningAnimation()
     {
         m_Animator.SetBool(isOpenHash, true);
     }

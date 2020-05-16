@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: McGregor
   health: 4
-  velocity: 2.1
+  speed: 2
   turnSmooth: 0.05

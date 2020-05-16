@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿/* Send unity events when On Trigger events are occurring*/
+using UnityEngine;
 using UnityEngine.Events;
 
 public class OnTriggerAction : MonoBehaviour

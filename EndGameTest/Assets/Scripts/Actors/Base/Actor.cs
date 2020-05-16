@@ -16,7 +16,7 @@ public abstract class Actor : MonoBehaviour, IDamagable
 
     private int health = 0;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         m_ActorAnimation = GetComponent<ActorAnimation>();
         m_Rigidbody = GetComponent<Rigidbody>();

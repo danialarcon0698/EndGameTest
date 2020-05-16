@@ -1,16 +1,16 @@
 ﻿using System;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Actor Data", fileName = "ActorData")]
-public class ActorScriptableObject : ScriptableObject
+public abstract class ActorScriptableObject : ScriptableObject
 {
+    [Header("Id")]
     public string playerName = "player_name";
+    
+    [Header("Health")]
     public int health = 3;
 
-    #region Movement
-    public float velocity = 1f;
-    public float turnSmooth = 0.15f;
-    #endregion
+    [Header("Movement Paramenters")]
+    public float speed = 1f;
 
     public Action<int> OnTakeDamage = null;
 }
