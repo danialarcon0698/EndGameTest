@@ -1,18 +1,35 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : Actor
 {
-    // Start is called before the first frame update
-    void Start()
+    private Player currentTarget = null;
+
+    private void Update()
     {
-        
+        if (Time.frameCount % 60 == 0)
+        {
+            CheckAI();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void CheckAI()
     {
-        
+
+    }
+
+    private Player GetClosestEnemy() 
+    {
+        Player result = null;
+        RaycastHit hit;
+        if (Physics.SphereCast(transform.position, 10f, transform.position, out hit, 20, PlayerUtilities.PlayerLayer))
+        {
+            if (hit.collider.GetComponent<Player>())
+            {
+                Debug.Log("Hit player");
+                result = hit.collider.GetComponent<Player>();
+                return result;
+            }
+        }
+        return result;
     }
 }

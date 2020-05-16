@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c244b9b2f5cce5746bddbcd7f3452679, type: 3}
-  m_Name: Actor
+  m_Script: {fileID: 11500000, guid: 3343aad72ee63874f85f1c7fce5efeb0, type: 3}
+  m_Name: dot45
   m_EditorClassIdentifier: 
-  velocity: 1
+  damage: 5
+  speed: 5

@@ -1,16 +1,38 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
 
-public abstract class Actor : MonoBehaviour
+[RequireComponent(typeof(ActorAnimation))]
+public abstract class Actor : MonoBehaviour, IDamagable
 {
     [SerializeField] protected ActorScriptableObject actor = null;
 
     protected Rigidbody m_Rigidbody = null;
 
+    protected ActorAnimation m_ActorAnimation = null;
+
+    protected float currentVelocity = 0;
+    protected float smooth = 0;
+
+    private int health = 0;
+
     private void Awake()
     {
+        m_ActorAnimation = GetComponent<ActorAnimation>();
         m_Rigidbody = GetComponent<Rigidbody>();
-        OnAwake();
     }
 
-    protected abstract void OnAwake();
+    private void Start()
+    {
+        health = actor.health;
+    }
+
+    public void DoDamage(int _damage) 
+    {
+        health -= _damage;
+        health = (health <= 0) ? health = 0 : health;
+
+        Debug.Log(health);
+        actor.OnTakeDamage?.Invoke(health);
+    }
 }
