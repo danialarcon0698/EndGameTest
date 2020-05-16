@@ -513,7 +513,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1333258425
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &9091600968019690365

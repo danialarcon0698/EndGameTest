@@ -2,15 +2,27 @@
 
 public class House : MonoBehaviour
 {
-    [SerializeField] private GameObject roof = null;
-    [SerializeField] private GameObject front = null;
-    [SerializeField] private GameObject back = null;
+    [SerializeField] private SpriteRenderer roof = null;
+    [SerializeField] private SpriteRenderer front = null;
+    [SerializeField] private SpriteRenderer back = null;
 
     private bool haveKey = false;
 
-    public void Enter() 
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log(other.gameObject.name);
+        EnterHouse();
+        if (other.gameObject.layer == LayerMask.GetMask("Player"))
+        {
+            Debug.Log("EEE");
+            EnterHouse();
+        }
+    }
+
+    public void EnterHouse() 
     {
         //TODO check if key exists
-        roof.SetActive(false);
+        roof.enabled = false;
+        front.enabled = false;
     }
 }

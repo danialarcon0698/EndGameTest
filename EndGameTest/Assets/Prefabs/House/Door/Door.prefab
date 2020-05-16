@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 559627034893572137}
   - component: {fileID: 594530743050701600}
   - component: {fileID: 3889687452847553703}
-  - component: {fileID: 182891152849389320}
-  - component: {fileID: 5627714167743161198}
+  - component: {fileID: 1491790810}
+  - component: {fileID: 1491790814}
   m_Layer: 11
   m_Name: Door
   m_TagString: Untagged
@@ -27,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1221796109192783314}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.70710677}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 0}
 --- !u!212 &594530743050701600
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: fafe2fc589a968a468d45f674f2d7c2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -103,8 +103,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!136 &182891152849389320
-CapsuleCollider:
+--- !u!65 &1491790810
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -113,11 +113,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1.2599778
-  m_Height: 2.478104
-  m_Direction: 2
-  m_Center: {x: -0.37046102, y: -6.8272305, z: -1.1703485}
---- !u!114 &5627714167743161198
+  serializedVersion: 2
+  m_Size: {x: 4.5333858, y: 2.5498695, z: 2.823867}
+  m_Center: {x: -0.29899073, y: -5.82959, z: -1.311934}
+--- !u!114 &1491790814
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,9 +125,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1221796109192783314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd3b3124e2f007a4b83b64ba62e07bbb, type: 3}
+  m_Script: {fileID: 11500000, guid: 41b61e9d7fb1b7a4fbb7e7948003bfe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnTriggerEnterEvent:
-    m_PersistentCalls:
-      m_Calls: []
