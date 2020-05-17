@@ -12,11 +12,19 @@ public class ActorAnimation : MonoBehaviour
         m_Animator = GetComponentInChildren<Animator>();
     }
 
+    /// <summary>
+    /// Set run or Idle animation depending on speed
+    /// </summary>
+    /// <param name="_speed"></param>
     public void SetBlendTree(float _speed) 
     {
         m_Animator.SetFloat(speedHash, _speed);
     }
 
+    /// <summary>
+    /// Set shooting animation value
+    /// </summary>
+    /// <param name="_value"></param>
     public void SetShooting(bool _value) 
     {
         m_Animator.SetBool(shootingHash, _value);

@@ -4,6 +4,10 @@ public class BulletPool : Pool<BulletPool, Bullet>
 {
     protected Bullet bulletToReturn = null;
 
+    /// <summary>
+    /// Get a bullet from the pool
+    /// </summary>
+    /// <returns></returns>
     public override Bullet GetPoolItem()
     {
         for (int i = 0; i < poolItems.Count; i++)

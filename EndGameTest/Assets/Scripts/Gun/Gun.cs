@@ -12,9 +12,13 @@ public class Gun : MonoBehaviour, IShootable
 
     private float elapsedTime = 0f;
 
-    public void Shoot(Vector2 _aim)
+    /// <summary>
+    /// Shoot a bullet depending on shoot rate
+    /// </summary>
+    /// <param name="_sqrMagnitude">If it is greater than 0, will start counting time</param>
+    public void Shoot(float _sqrMagnitude)
     {
-        if (_aim.sqrMagnitude > 0)
+        if (_sqrMagnitude > 0)
         {
             elapsedTime += Time.fixedDeltaTime;
         }
@@ -25,18 +29,18 @@ public class Gun : MonoBehaviour, IShootable
 
         if (elapsedTime >= m_Data.shootRate)
         {
-            //Things with "View"
+            //Stuff with "View"
             m_GunView.ActivateMuzzleParticles();
             m_GunView.PlayShotSound();
 
+            //Get a bullet and set it to be shot
             bulletToShoot = BulletPool.instance.GetPoolItem();
             bulletToShoot.gameObject.SetActive(true);
+            
             bulletToShoot.transform.position = m_ReferencePoint.position;
+            bulletToShoot.transform.rotation = m_ReferencePoint.rotation;
+            
             bulletToShoot.Rigidbody.velocity = Vector3.zero;
-            
-            float angle = Mathf.Atan2(_aim.x, _aim.y) * Mathf.Rad2Deg;
-            bulletToShoot.transform.rotation = Quaternion.Euler(0f, angle, 0f);
-            
             bulletToShoot.Rigidbody.AddForce(m_ReferencePoint.forward * m_Data.shootForce, ForceMode.Impulse);
             
             elapsedTime = 0f;

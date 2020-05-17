@@ -10,11 +10,15 @@ public class Door : MonoBehaviour
 
     private void Awake()
     {
-        doorView = GetComponent<DoorView>();
+        doorView = GetComponentInChildren<DoorView>();
         m_Collider = GetComponent<BoxCollider>();
         m_House = GetComponentInParent<House>();
     }
 
+    /// <summary>
+    /// Verify if the key has been taken
+    /// </summary>
+    /// <param name="_collision"></param>
     private void OnCollisionEnter(Collision _collision)
     {
         if (m_House.HasKey)

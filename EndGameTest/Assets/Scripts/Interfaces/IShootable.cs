@@ -2,5 +2,9 @@
 
 public interface IShootable
 {
-    void Shoot(Vector2 _aimVector);
+    /// <summary>
+    /// Shootable
+    /// </summary>
+    /// <param name="_magnitude"></param>
+    void Shoot(float _magnitude);
 }

@@ -11,12 +11,17 @@ public class Bullet : MonoBehaviour
         Rigidbody = GetComponent<Rigidbody>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    /// <summary>
+    /// Register bullet collisions
+    /// </summary>
+    /// <param name="_collision"></param>
+    private void OnCollisionEnter(Collision _collision)
     {
-        IDamagable damagable = collision.gameObject.GetComponent<IDamagable>();
+        IDamagable damagable = _collision.gameObject.GetComponent<IDamagable>();
 
         if (damagable != null)
         {
+            //If collision has IDamagable
             damagable.DoDamage(bulletScriptable.damage);
         }
 

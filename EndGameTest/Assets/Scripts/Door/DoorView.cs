@@ -11,7 +11,7 @@ public class DoorView : MonoBehaviour
     }
 
     /// <summary>
-    /// Start door opening animation.
+    /// Start door opening.
     /// </summary>
     public void OpeningAnimation()
     {

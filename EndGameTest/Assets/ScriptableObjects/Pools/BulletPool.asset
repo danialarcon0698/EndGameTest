@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BulletPool
   m_EditorClassIdentifier: 
   prefab: {fileID: 6265277360846626075, guid: a655ab36be7396c4c9c1b75ff38e73b2, type: 3}
-  numberToInstantiate: 50
+  numberToInstantiate: 10

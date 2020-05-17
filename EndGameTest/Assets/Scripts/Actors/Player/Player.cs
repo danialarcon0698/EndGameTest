@@ -13,6 +13,10 @@ public class Player : Actor, IMovable, IRotable
         m_Data = actor as PlayerScriptableObject;
     }
 
+    /// <summary>
+    /// Move in a direction multiplied by a speed
+    /// </summary>
+    /// <param name="_direction"></param>
     public void Move(Vector2 _direction)
     {
         moveVector = _direction;
@@ -27,6 +31,9 @@ public class Player : Actor, IMovable, IRotable
         }
     }
 
+    /// <summary>
+    /// Rotate in the same direction as move vector direction
+    /// </summary>
     private void Rotate() 
     {
         if (moveVector == Vector2.zero) return;
@@ -36,6 +43,10 @@ public class Player : Actor, IMovable, IRotable
         m_Rigidbody.MoveRotation(Quaternion.Euler(0, smooth, 0));
     }
 
+    /// <summary>
+    /// Rotate in a direction by a vector given (joystick)
+    /// </summary>
+    /// <param name="_direction"></param>
     public void Rotate(Vector2 _direction)
     {
         aimVector = _direction;
@@ -53,6 +64,10 @@ public class Player : Actor, IMovable, IRotable
         m_Rigidbody.MoveRotation(Quaternion.Euler(0, smooth, 0));
     }
 
+    /// <summary>
+    /// Is character using aiming joystick?
+    /// </summary>
+    /// <returns></returns>
     private bool IsAiming() 
     {
         return aimVector != Vector2.zero;

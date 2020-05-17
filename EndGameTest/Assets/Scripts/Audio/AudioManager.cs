@@ -39,6 +39,10 @@ public class AudioManager : MonoBehaviour
         PlayMusic(audioClips.inGameMusic, 0.2f, 1f, 1f);
     }
 
+    /// <summary>
+    /// Initialize pool
+    /// </summary>
+    /// <param name="audioSourcesAmount"></param>
     private void CreateAudioSources(int audioSourcesAmount)
     {
         audioSources = new List<AudioSource>();

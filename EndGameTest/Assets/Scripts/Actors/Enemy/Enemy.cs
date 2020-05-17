@@ -23,13 +23,14 @@ public class Enemy : Actor
         m_Agent = GetComponent<NavMeshAgent>();
         shootable = GetComponent<IShootable>();
 
+        //We are taking the value as a "magnitude" but we are comparing it as a sqrMagnitude
         distanceToShoot = Mathf.Pow(m_Data.distanceToShoot, 2f);
         
         InitializeAgent();
     }
 
     /// <summary>
-    /// Set all the values taken from scriptable
+    /// Initialize agent component, all the values are taken from scriptable object
     /// </summary>
     private void InitializeAgent()
     {
@@ -43,6 +44,7 @@ public class Enemy : Actor
     {
         if (Time.frameCount % m_Data.framesToUpdateAI == 0)
         {
+            //Update AI behavior
             UpdateBehavior();
         }
     }
@@ -51,10 +53,11 @@ public class Enemy : Actor
     {
         if (isShooting)
         {
-            shootable.Shoot(Vector2.one);
+            shootable.Shoot(1);
             transform.LookAt(currentTarget.transform); 
         }
 
+        //Update animation
         m_ActorAnimation.SetBlendTree(m_Agent.velocity.normalized.magnitude);
     }
 
@@ -71,6 +74,7 @@ public class Enemy : Actor
 
             float distance = (currentTarget.transform.position - transform.position).sqrMagnitude;
 
+            //The distance is appropriate to start shooting
             if (distance <= distanceToShoot)
             {
                 isShooting = true;
@@ -84,6 +88,7 @@ public class Enemy : Actor
         }
         else 
         {
+            //If can't find enemies
             isShooting = false;
             m_ActorAnimation.SetShooting(false);
         }

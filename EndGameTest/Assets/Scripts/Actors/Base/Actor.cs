@@ -3,7 +3,7 @@
 [RequireComponent(typeof(ActorAnimation))]
 public abstract class Actor : MonoBehaviour, IDamagable
 {
-    [SerializeField] protected ActorScriptableObject actor = null;
+    [SerializeField] protected ActorScriptableObject actor = null;//Data from scriptable object
 
     protected Rigidbody m_Rigidbody = null;
 
