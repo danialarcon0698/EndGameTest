@@ -15,10 +15,12 @@ MonoBehaviour:
   playerName: Mayweather
   health: 10
   speed: 2
-  turnSmooth: 0.05
+  angularSpeed: 250
+  acceleration: 8
+  stoppingDistance: 3
+  distanceToShoot: 4.3
   enemyLayer:
     serializedVersion: 2
     m_Bits: 512
   framesToUpdateAI: 120
   radius: 10
-  maxDistance: 20

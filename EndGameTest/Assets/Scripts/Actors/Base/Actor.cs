@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(ActorAnimation))]
 public abstract class Actor : MonoBehaviour, IDamagable
@@ -20,19 +18,25 @@ public abstract class Actor : MonoBehaviour, IDamagable
     {
         m_ActorAnimation = GetComponent<ActorAnimation>();
         m_Rigidbody = GetComponent<Rigidbody>();
-    }
-
-    private void Start()
-    {
+        
         health = actor.health;
     }
 
+    /// <summary>
+    /// Take damage and check if actor has died.
+    /// </summary>
+    /// <param name="_damage"></param>
     public void DoDamage(int _damage) 
     {
         health -= _damage;
         health = (health <= 0) ? health = 0 : health;
 
-        Debug.Log(health);
         actor.OnTakeDamage?.Invoke(health);
+        
+        if (health <= 0)
+        {
+            AudioManager.instance.PlaySFx(AudioManager.instance.audioClips.angryCharacter, 1f, false);
+            gameObject.SetActive(false);
+        }
     }
 }

@@ -18,6 +18,7 @@ public class HouseView : MonoBehaviour
     /// </summary>
     public void CheckIfCanActiveHouse()
     {
+        //TODO check if someone is still inside e.g. (enemies)
         if (!m_House.IsInHouse)
         {
             SetActiveBack(true);

@@ -15,6 +15,7 @@ public class DoorView : MonoBehaviour
     /// </summary>
     public void OpeningAnimation()
     {
+        AudioManager.instance.PlaySFx(AudioManager.instance.audioClips.door, 1f, false);
         m_Animator.SetBool(isOpenHash, true);
     }
 }
