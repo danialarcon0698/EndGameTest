@@ -2972,6 +2972,11 @@ PrefabInstance:
       propertyPath: camTransform
       value: 
       objectReference: {fileID: 963194228}
+    - target: {fileID: 3275050863345424619, guid: 35ee270ca41746d4cbbcac345df78b47,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8694265665463904055, guid: 35ee270ca41746d4cbbcac345df78b47,
         type: 3}
       propertyPath: m_Camera
@@ -3075,6 +3080,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1822989298208311216, guid: 48e6ecc0ab811884ab174c0e3947ea99,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822989298208311216, guid: 48e6ecc0ab811884ab174c0e3947ea99,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.98
+      objectReference: {fileID: 0}
     - target: {fileID: 7589181880448483892, guid: 48e6ecc0ab811884ab174c0e3947ea99,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3134,6 +3149,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: House
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589181881391806559, guid: 48e6ecc0ab811884ab174c0e3947ea99,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589181881391806559, guid: 48e6ecc0ab811884ab174c0e3947ea99,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.0610447
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589181881391806559, guid: 48e6ecc0ab811884ab174c0e3947ea99,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -7.084018
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589181881875653407, guid: 48e6ecc0ab811884ab174c0e3947ea99,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589181881875653407, guid: 48e6ecc0ab811884ab174c0e3947ea99,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.9356046
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589181881875653407, guid: 48e6ecc0ab811884ab174c0e3947ea99,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -6.089053
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589181881875653407, guid: 48e6ecc0ab811884ab174c0e3947ea99,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -1.311934
       objectReference: {fileID: 0}
     - target: {fileID: 8607690700241131553, guid: 48e6ecc0ab811884ab174c0e3947ea99,
         type: 3}

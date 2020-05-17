@@ -7,6 +7,6 @@ public class Key : MonoBehaviour
     /// </summary>
     public void PlayKeySound() 
     {
-        AudioManager.instance.PlaySFx(AudioManager.instance.audioClips.key, 1f, false);
+        AudioManager.instance.PlaySFx(AudioManager.instance.audioClips.key, 0.2f, false);
     }
 }
