@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c244b9b2f5cce5746bddbcd7f3452679, type: 3}
+  m_Script: {fileID: 11500000, guid: b6c8028f3358c4041a9bda5dbe6e1547, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
   playerName: McGregor
   health: 4
-  velocity: 2.1
+  speed: 2
   turnSmooth: 0.05

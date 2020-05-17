@@ -17,7 +17,7 @@ TagManager:
   - Player
   - Enemy
   - Interactables
-  - 
+  - House
   - 
   - 
   - 
@@ -40,4 +40,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: ActorsUI
+    uniqueID: 2961708871
     locked: 0

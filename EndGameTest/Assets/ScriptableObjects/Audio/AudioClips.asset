@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4378aa5d3b75bb740935065a4486353d, type: 3}
+  m_Name: AudioClips
+  m_EditorClassIdentifier: 
+  inGameMusic: {fileID: 8300000, guid: ea827794c32e7e84b942394a2cd4a5fd, type: 3}
+  gunShot: {fileID: 8300000, guid: aec4d70b9c063fd4f9600018b28be298, type: 3}
+  angryCharacter: {fileID: 8300000, guid: 8bf21f388fb51e943bbc61d0882974a6, type: 3}
+  key: {fileID: 8300000, guid: 23d350d87d69d1f47bb7852c6823744a, type: 3}
+  door: {fileID: 8300000, guid: 2f88cdecc5dcdd843abffd95f98385c5, type: 3}

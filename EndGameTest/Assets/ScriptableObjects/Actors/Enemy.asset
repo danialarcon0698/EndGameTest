@@ -9,10 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c244b9b2f5cce5746bddbcd7f3452679, type: 3}
+  m_Script: {fileID: 11500000, guid: 18b1720a586f3444490899f1752112a5, type: 3}
   m_Name: Enemy
   m_EditorClassIdentifier: 
   playerName: Mayweather
   health: 10
-  velocity: 2.1
-  turnSmooth: 0.05
+  speed: 2
+  angularSpeed: 250
+  acceleration: 8
+  stoppingDistance: 3
+  distanceToShoot: 4.3
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  framesToUpdateAI: 120
+  radius: 10
